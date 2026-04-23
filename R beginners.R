@@ -67,7 +67,7 @@ hist(Yield_season_2$tw_nighty,
      xlab = "nt_nighty")
 
 # Add density curve
-lines(density(Yield_season_2$nt_nighty), 
+lines(density(Yield_season_2$tw_nighty), 
       col = "red", 
       lwd = 2)
 
@@ -89,3 +89,7 @@ cor(Yield_season_2$nt_nighty, Yield_season_2$tw_nighty, method = "spearman")
 # small samples
 cor(Yield_season_2$nt_nighty, Yield_season_2$tw_nighty, method = "kendall") 
 
+# other methods of correlation with p value
+cor.test(Yield_season_2$nt_nighty, Yield_season_2$tw_nighty, method = "pearson")
+cor.test(Yield_season_2$nt_nighty, Yield_season_2$tw_nighty, method = "spearman")
+cor.test(Yield_season_2$nt_nighty, Yield_season_2$tw_nighty, method = "kendall")
